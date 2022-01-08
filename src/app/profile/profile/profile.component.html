@@ -1,0 +1,47 @@
+
+
+<div class="container">
+    <div class="row mt-5">
+<div class="col">
+    <a routerLink="">Back</a>
+</div>
+        <table class="mt-2">
+            <thead>
+                <tr>
+                    <th *ngFor="let item of imageArray;let i = index">
+
+                        <div class="card" style="width: 20rem;">
+
+
+                            <img class="card-img-top" [src]="item.path" height="300px" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up
+                                    the bulk of the
+                                    card's content.</p>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-6 text-center">
+                                    <div id="tick-mark"></div>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <div id="mdiv" (click)="remove(item,i)">
+                                        <div class="mdiv">
+                                            <div class="md"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
